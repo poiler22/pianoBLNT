@@ -18,14 +18,14 @@ LED_CHANNEL    = 0       # set to '1' for GPIOs 13, 19, 41, 45 or 53
 def colorWipe(strip, i, color):
     """Wipe color across display a pixel at a time."""
     #for i in range(strip.numPixels()):
-    strip.setPixelColor(strip, i, color)
+    strip.setPixelColor(i, color)
     strip.show()
     #time.sleep(wait_ms/1000.0)
 
 def colorWipeClear(strip):
     for i in range(strip.numPixels()):
         #colorWipe(strip, Color(0,0,0), 10)
-        strip.setPixelColor(strip, i, Color(0,0,0))
+        strip.setPixelColor(i, Color(0,0,0))
         strip.show()
 def theaterChase(strip, color, wait_ms=50, iterations=10):
     """Movie theater light style chaser animation."""
